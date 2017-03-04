@@ -1,15 +1,15 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "chrome": 55,
-        "browsers": ["last 2 versions"]
-      }
-    }],
-    "react",
-    "stage-0"
-  ],
-  "plugins": [
-    "react-hot-loader/babel"
-  ]
+	"presets": [
+		["env", {
+			"targets": {
+				"chrome": 55,
+				"browsers": ["last 2 versions"]
+			}
+		}],
+		"react",
+		"stage-0"
+	],
+	"plugins": [
+		"react-hot-loader/babel"
+	]
 }

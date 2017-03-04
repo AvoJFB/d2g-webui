@@ -1,0 +1,6 @@
+export const GET_USER_SUCCESS = 'GET_USER_SUCCESS';
+export const GET_USER_FAILURE = 'GET_USER_FAILURE';
+export const GET_USER_LIST_SUCCESS = 'GET_USER_LIST_SUCCESS';
+export const GET_USER_LIST_FAILURE = 'GET_USER_LIST_FAILURE';
+
+export default '';

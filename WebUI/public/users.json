@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "firstName": "Avetik",
+      "lastName": "Harutyunyan",
+      "email": "avetik.harutyunyan@gmail.com",
+      "avatarUrl": "http://i.imgur.com/R1NoXye.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "John.smith@gmail.com",
+      "avatarUrl": "http://i.imgur.com/R1NoXye.jpg"
+    }
+]
