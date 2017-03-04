@@ -1,4 +1,4 @@
-import { GET_USER_SUCCESS, GET_USER_FAILURE } from '../constants/UserConstants';
+import { GET_USER_SUCCESS, GET_USER_FAILURE } from '../constants/userConstants';
 
 export default function user(state = {}, action) {
   switch (action.type) {

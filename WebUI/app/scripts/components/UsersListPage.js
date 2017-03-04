@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import UserInfo from '../components/UserInfo';
-import UserShape from '../shapes/UserShape';
+import UserShape from '../shapes/userShape';
 
 
 const UsersListPage = props => (

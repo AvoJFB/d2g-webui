@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_USER_FAILURE, GET_USER_SUCCESS } from '../constants/UserConstants';
+import { GET_USER_FAILURE, GET_USER_SUCCESS } from '../constants/userConstants';
 
 export const getUserSuccess = user => ({
   type: GET_USER_SUCCESS,

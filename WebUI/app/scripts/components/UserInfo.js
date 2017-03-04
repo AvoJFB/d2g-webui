@@ -1,5 +1,5 @@
 import React from 'react';
-import UserShape from '../shapes/UserShape';
+import UserShape from '../shapes/userShape';
 
 const UserInfo = props => (
   <div>

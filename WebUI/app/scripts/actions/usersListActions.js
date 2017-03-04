@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } from '../constants/UserConstants';
+import { GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } from '../constants/userConstants';
 
 export const getUsersListSuccess = users => ({
   type: GET_USER_LIST_SUCCESS,
