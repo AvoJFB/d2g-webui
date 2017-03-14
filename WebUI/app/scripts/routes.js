@@ -7,14 +7,12 @@ import UserInfoPageContainer from './containers/UserInfoPageContainer';
 import UsersListPageContainer from './containers/UsersListPageContainer';
 
 const router = () => (
-  <Router history={hashHistory}>
-    <Route component={App}>
-      <Route path="/" component={MainPage} />
-      <Route path="/Auth" component={AuthPage} />
-      <Route path="/UserInfo" component={UserInfoPageContainer} />
-      <Route path="/UsersList" component={UsersListPageContainer} />
-    </Route>
-  </Router>
+  <Route component={App}>
+    <Route path="/" component={MainPage} />
+    <Route path="/Auth" component={AuthPage} />
+    <Route path="/UserInfo" component={UserInfoPageContainer} />
+    <Route path="/UsersList" component={UsersListPageContainer} />
+  </Route>
 );
 
 export default router;
