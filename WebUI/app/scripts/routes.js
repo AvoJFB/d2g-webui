@@ -6,7 +6,8 @@ import AuthPage from './components/AuthPage';
 import UserInfoPageContainer from './containers/UserInfoPageContainer';
 import UsersListPageContainer from './containers/UsersListPageContainer';
 
-const router = () => (
+
+export default (
   <Route component={App}>
     <Route path="/" component={MainPage} />
     <Route path="/Auth" component={AuthPage} />
@@ -14,5 +15,3 @@ const router = () => (
     <Route path="/UsersList" component={UsersListPageContainer} />
   </Route>
 );
-
-export default router;

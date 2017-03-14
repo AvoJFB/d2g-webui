@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Button from 'react-bootstrap/lib/Button';
 import ButtonGroup from 'react-bootstrap/lib/ButtonGroup';
 import { LinkContainer } from 'react-router-bootstrap';

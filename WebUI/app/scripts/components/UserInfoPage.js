@@ -2,6 +2,7 @@ import React from 'react';
 import UserInfo from './UserInfo';
 import UserShape from '../shapes/userShape';
 
+
 const UserInfoPage = props => (
   <div>
     <h1>This is user info page.</h1>
