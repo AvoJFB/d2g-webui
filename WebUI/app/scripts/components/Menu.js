@@ -1,26 +1,19 @@
 import React from 'react';
-import Button from 'react-bootstrap/lib/Button';
-import ButtonGroup from 'react-bootstrap/lib/ButtonGroup';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
+import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
+
+const menuItems = (
+  <div>
+    <Link to="/" ><FlatButton label="Home" /></Link>
+    <Link to="/Auth" ><FlatButton label="Auth" /></Link>
+    <Link to="/UserInfo" ><FlatButton label="User" /></Link>
+    <Link to="/UsersList" ><FlatButton label="Users" /></Link>
+  </div>
+);
 
 const Menu = () => (
-  <div>
-    <ButtonGroup>
-      <LinkContainer to="/">
-        <Button>Main</Button>
-      </LinkContainer>
-      <LinkContainer to="/Auth">
-        <Button>Auth</Button>
-      </LinkContainer>
-      <LinkContainer to="/UserInfo">
-        <Button>User Info</Button>
-      </LinkContainer>
-      <LinkContainer to="/UsersList">
-        <Button>Users List</Button>
-      </LinkContainer>
-    </ButtonGroup>
-    <hr />
-  </div>
+  <AppBar title="D2G" iconElementRight={menuItems} />
 );
 
 export default Menu;

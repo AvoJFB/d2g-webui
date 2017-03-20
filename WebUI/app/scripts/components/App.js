@@ -5,7 +5,9 @@ import Menu from './Menu';
 const App = props => (
   <div>
     <Menu />
-    {props.children}
+    <div className="container">
+      {props.children}
+    </div>
   </div>
 );
 

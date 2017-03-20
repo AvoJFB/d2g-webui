@@ -6,7 +6,7 @@ var webpack = require('webpack'),
 module.exports = {
   devtool: '#eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:8081',
+    'webpack-dev-server/client?http://127.0.0.0:8080',
     'webpack/hot/only-dev-server',
     './app/index'
   ],
@@ -33,7 +33,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"development"'
     }),
-    new OpenBrowserPlugin({ url: 'http://localhost:8081' }),
+    new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     new StyleLintPlugin({
       'files': ['**/*.s?(a|le|c)ss'],
       'syntax': 'less',
