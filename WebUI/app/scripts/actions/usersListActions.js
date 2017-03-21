@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { GET_USER_LIST_REQUEST, GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } from '../constants/userConstants';
 
-export const getUsersListStart = () => ({
+export const getUsersListRequest = () => ({
   type: GET_USER_LIST_REQUEST,
 });
 
@@ -15,10 +15,10 @@ export const getUsersListFailure = error => ({
   error,
 });
 
-export const getUsersListRequest = () => (
+export const getUsersList = () => (
   (dispatch) => {
-    dispatch(getUsersListStart());
-    axios.get('http://localhost:8080/users.json')
+    dispatch(getUsersListRequest());
+    return axios.get('http://localhost:8080/users.json')
       .then(response => dispatch(getUsersListSuccess(response.data)))
       .catch(error => dispatch(getUsersListFailure(error)));
   }

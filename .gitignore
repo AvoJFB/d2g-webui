@@ -16,3 +16,5 @@ WebUI/**/node_modules
 
 #JetBrains .idea
 .idea/
+
+WebUI/public/*.js

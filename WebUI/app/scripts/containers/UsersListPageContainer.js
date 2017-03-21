@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import UsersListPage from '../components/UsersListPage';
-import { getUsersListRequest } from '../actions/usersListActions';
+import { getUsersList } from '../actions/usersListActions';
 
 const mapStateToProps = state => ({
-  users: state.users,
+  usersListPage: state.usersListPage,
 });
 
 const mapDispatchToProps = (dispatch) => {
-  dispatch(getUsersListRequest());
+  dispatch(getUsersList());
   return {
     onGetUsersList() {
-      dispatch(getUsersListRequest());
+      dispatch(getUsersList());
     },
   };
 };

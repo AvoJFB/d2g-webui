@@ -6,11 +6,11 @@ import UserShape from '../shapes/userShape';
 
 const UserInfoPage = (props) => {
   let content = null;
-  if (props.user.fetched) {
+  if (props.userInfoPage.fetched) {
     content = (
       <div>
         <h1>This is user info page.</h1>
-        <UserInfo user={props.user.payload} />
+        <UserInfo user={props.userInfoPage.user} />
       </div>
     );
   } else {
@@ -24,8 +24,8 @@ const UserInfoPage = (props) => {
 };
 
 UserInfoPage.propTypes = {
-  user: React.PropTypes.shape({
-    payload: React.PropTypes.shape(UserShape),
+  userInfoPage: React.PropTypes.shape({
+    user: React.PropTypes.shape(UserShape),
     isFetching: React.PropTypes.bool,
     fetched: React.PropTypes.bool,
   }),

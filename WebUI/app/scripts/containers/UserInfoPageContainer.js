@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import UserInfoPage from '../components/UserInfoPage';
-import { getUserRequest } from '../actions/userActions';
+import { getUser } from '../actions/userActions';
 
 const mapStateToProps = state => ({
-  user: state.user,
+  userInfoPage: state.userInfoPage,
 });
 
 const mapDispatchToProps = (dispatch) => {
-  dispatch(getUserRequest());
+  dispatch(getUser());
   return {
     onGetUser() {
-      dispatch(getUserRequest());
+      dispatch(getUser());
     },
   };
 };

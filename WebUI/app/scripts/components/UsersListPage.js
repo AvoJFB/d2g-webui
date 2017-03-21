@@ -7,7 +7,7 @@ import UserShape from '../shapes/userShape';
 
 const UsersListPage = (props) => {
   let content = null;
-  if (props.users.fetched) {
+  if (props.usersListPage.fetched) {
     content = (
       <Table>
         <TableHeader>
@@ -23,8 +23,8 @@ const UsersListPage = (props) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {props.users.payload.map(user => (
-            <TableRow>
+          {props.usersListPage.users.map(user => (
+            <TableRow key={user.id}>
               <TableRowColumn>{user.firstName}</TableRowColumn>
               <TableRowColumn>{user.lastName}</TableRowColumn>
               <TableRowColumn>{user.email}</TableRowColumn>
@@ -44,10 +44,10 @@ const UsersListPage = (props) => {
 };
 
 UsersListPage.propTypes = {
-  users: React.PropTypes.shape({
-    payload: React.PropTypes.arrayOf(React.PropTypes.shape(UserShape)),
+  usersListPage: React.PropTypes.shape({
     isFetching: React.PropTypes.bool,
     fetched: React.PropTypes.bool,
+    users: React.PropTypes.arrayOf(React.PropTypes.shape(UserShape)),
   }),
 };
 

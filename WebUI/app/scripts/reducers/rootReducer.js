@@ -1,11 +1,11 @@
 import { reducer as form } from 'redux-form';
 import { combineReducers } from 'redux';
-import user from './user';
-import users from './users';
+import userInfoPage from './userInfoPage';
+import usersListPage from './usersListPage';
 
 
 export default combineReducers({
-  user,
-  users,
+  userInfoPage,
+  usersListPage,
   form,
 });

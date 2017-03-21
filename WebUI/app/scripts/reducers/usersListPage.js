@@ -6,7 +6,7 @@ const initialState = {
   users: [],
 };
 
-export default function users(state = initialState, action) {
+export default function usersListPage(state = initialState, action) {
   switch (action.type) {
     case GET_USER_LIST_REQUEST:
       return {

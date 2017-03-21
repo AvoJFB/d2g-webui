@@ -6,7 +6,7 @@ const initialState = {
   user: {},
 };
 
-export default function user(state = initialState, action) {
+export default function userInfoPage(state = initialState, action) {
   switch (action.type) {
     case GET_USER_REQUEST:
       return {
