@@ -3,7 +3,7 @@ import { GET_USER_LIST_REQUEST, GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } f
 const initialState = {
   isFetching: false,
   fetched: false,
-  payload: [],
+  users: [],
 };
 
 export default function users(state = initialState, action) {
@@ -17,7 +17,7 @@ export default function users(state = initialState, action) {
     case GET_USER_LIST_SUCCESS:
       return {
         ...state,
-        payload: action.users,
+        users: action.users,
         isFetching: false,
         fetched: true,
       };

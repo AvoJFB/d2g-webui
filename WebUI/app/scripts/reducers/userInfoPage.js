@@ -3,7 +3,7 @@ import { GET_USER_REQUEST, GET_USER_SUCCESS, GET_USER_FAILURE } from '../constan
 const initialState = {
   isFetching: false,
   fetched: false,
-  payload: {},
+  user: {},
 };
 
 export default function user(state = initialState, action) {
@@ -17,7 +17,7 @@ export default function user(state = initialState, action) {
     case GET_USER_SUCCESS:
       return {
         ...state,
-        payload: action.user,
+        user: action.user,
         isFetching: false,
         fetched: true,
       };
