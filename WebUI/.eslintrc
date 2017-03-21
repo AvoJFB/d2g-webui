@@ -6,7 +6,6 @@
 		"max-len": [1, 120, 2, {"ignoreComments": true}],
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 		"no-console": 0,
-		"linebreak-style": ["error", "windows"],
 		"indent": 2
 	},
 	"env": {
