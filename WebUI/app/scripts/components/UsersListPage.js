@@ -9,7 +9,7 @@ const UsersListPage = (props) => {
   let content = null;
   if (props.usersListPage.fetched) {
     content = (
-      <Table>
+      <Table multiSelectable>
         <TableHeader>
           <TableRow>
             <TableHeaderColumn colSpan="3" style={{ textAlign: 'center' }}>
