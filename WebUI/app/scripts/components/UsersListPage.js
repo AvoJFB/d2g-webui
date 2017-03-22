@@ -22,7 +22,7 @@ const UsersListPage = (props) => {
             <TableHeaderColumn>Email</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody showRowHover>
           {props.usersListPage.users.map(user => (
             <TableRow key={user.id}>
               <TableRowColumn>{user.firstName}</TableRowColumn>
