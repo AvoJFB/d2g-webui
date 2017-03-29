@@ -4,3 +4,6 @@ node_js:
 before_script:
   - cd WebUI && npm install
 script: npm run build:dev
+deploy:
+  - provider s3
+  - region
