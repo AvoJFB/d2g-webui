@@ -1,9 +1,14 @@
 language: node_js
 node_js:
-  - "6.10.0"
+- 6.10.0
 before_script:
-  - cd WebUI && npm install
+- cd WebUI && npm install
 script: npm run build:dev
 deploy:
-  - provider s3
-  - region
+  provider: s3
+  region: us-west-2
+  bucket: "d2g-webui"
+  access_key_id:
+    secure: "EsiSza0dw+ZsMRU3YgU2XZcN1MJpr9srtZqWzitejrDOiXYGmPOY2wO/H5wXT8gu0dwEBdeg6ACZl30IbNPs5QGLED19dsUJ5soYAcdDyayh0/TJOWnHYzXkWt13y9/nfsoixKFLIFUojpFMQcMnLHOcTG/3NGCE77NH+DdGCnglJcs+oF8+EdwKBjtsf3qX1i7A1sc+9i6oyx2AJfAcsrY05z8v0ukUxa53HmR+0TmVu31XQwBqrPVfncRaRtQm4A8mnEub6sUoX6cgye8nl+consU+ue8pM1SPRE8Lcpwv5b57ZDh10beRfhIns1UVR48+jy1JXaUJZCderXUPJaTl0iw57iNTuWlQk+6w/a0PeMzpX6dFM7nTrbBV6ycNwO7aPrLS5K3rqjSZYHzsP5X0L7+W1ARFo62Froqdg7vgw8iAcw+wLkepYQIAxEWPVhB2ooE3922XRrEODhC6zpHvOhAgFFhEFhgBy/K7LLtkFP81gbWS2iXXS4A3S/rhc8nOChaL+ifLlIzWjUfm98Jao8+wgYp5V6izYrkyNI5Hxd6OOVFjexiIBERcjBXI4mEiZiIlSW2apSQ3+CYFE5evjmaJrpk3YjkadHCx8btJzodGLS9ni9Sj36zidiB/PN4Gym53o6H4+muMWjrYpVeNmnGLXfVL1chDabLJroA="
+  secret_access_key:
+    secure: "emG/KOtcnThk+E5YamWSKVfaR0NrXtBYAP9LZzsqlW1E6MMbFvR3MtV4tHjtVAi42kADF1iHajtnRBrYHnS6sn4srHiwxWGRzBNO2BTHNE8MRbnnpkbb//9iiwqu/c+wlsIBYUFqVq6bLWP1LG2eOptY5Ds6XPBWwj4FBKQw8F4UJDScqTjiwkLvan3AgoFD9d/TL3WRiv71J6fg65ULLpvrG7Ylt95n7xDZYK83gJlkPH/eIMwZhGWrRBGSk1ExXX6vav/L1h3bhHqnw3EMdtKbhICGHkZIt5d7s3e2CvQp+9oiF/ghthYw/ar3lRcPJQd642sqJhfBvYva00HoR3XOGxpjEmzNSV1per5fLJtrPvl9yxS4DFoOzFIC1aWM3XXcbV/6JLNIO24z1QWX3qRzvv8CkSlwca9qmYKkXdyfp11diLOCMnhJ8je7vEpJrjYlMHb/OkEx8U7Qw1WnA7PZPkoZqpMe94rZghy4WPcv1ebQKmOlIVmgyEJfWw+oMVUTPF6Ci+j+3X9jhikRFvxTVCaCu5RCmcPOajWezspHY94IN1zj9IITuCRrRqIfRv+9u+AEswIkg0N0/tJiwiQmPTr+BbrxBcYIhNJfHna15wVUhXMIZvQPOALm9kPJvMnFDAiZi5rlmHb/pJHuGKmqfRC0q/a5NEJinUc6gTc="
