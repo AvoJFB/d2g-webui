@@ -18,7 +18,7 @@ export const getUserFailure = error => ({
 export const getUser = () => (
   (dispatch) => {
     dispatch(getUserRequest());
-    return axios.get('http://localhost:8080/user.json')
+    return axios.get('/user.json')
       .then(response => dispatch(getUserSuccess(response.data)))
       .catch(error => dispatch(getUserFailure(error)));
   }
