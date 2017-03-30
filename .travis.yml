@@ -10,7 +10,8 @@ deploy:
   secret_access_key:
     secure: bRnsUXLqJ8RpfpvYYcEsYCvoYgXh05whtpJKZ0tBIfIhbXnynIlzEJC1/f+oLGLNLr6LKd8aiLPyIJaDytZ7bRZf1Fl9krpM6ouycBTb1d4vCnMJM7H/P7mlFdXs3LfryoDN4Tr2ls/zci6jTWKtrvcNGrazqvhvJNS04cIU8KzZpdHMLB8gk6SZgbuCH/83rVj5ng3IUyOEiZTrP/kmkysB18lp5CdAl9jmfVfZr0IVYoyGTaDXc5lPRb9gjoznP00TY0Dysy3MVQYfX8d/PMdUmqbYR+wBLbZjoy2mImGGvFTasVuQ2ibn9/6k8T10OHCnpvCdzyOgdHrH3QYZZdD2cGzKFmtjk2+jzCsNPCnVkMzq+Vo7h3u8BT6qLips3pL5RxlevCt8UFKUtLeJzK6ljrJUhZpXqJx7JEMQPCQ4LCExZVpBx1zl7X+550XvjNjW4aK8JMKs0Wsag4A6Zz+IjCUgAVB22KjOKHUzW1edY4qpDpLKVlutoMVGNwqepFt6fiHMmLwFDPHnFtOHBQSaNBaADzFH3POItEWUL6p8azvR90w/n5WHlYKDSmIuVHDFoxtS/m9mbo1KD1eMcmCCL3S0VUogPmHVPb4Fa9rMD9DSRyqQXedQ0raA4bSFAMk9oKZXPZINMdUclsDCJjmBYFyIFF9gFNbBf1ktHVo=
   bucket: d2g-webui
-  local-dir: d2g-webui
+  region: us-west-2
+  skip_cleanup: true
   upload-dir: public
   on:
     repo: AvoJFB/d2g-webui
