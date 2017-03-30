@@ -13,5 +13,6 @@ deploy:
   region: us-west-2
   local-dir: public
   acl: public_read
+  skip_cleanup: true
   on:
     repo: AvoJFB/d2g-webui
