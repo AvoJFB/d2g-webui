@@ -12,5 +12,6 @@ deploy:
   bucket: d2g-webui
   region: us-west-2
   local-dir: public
+  acl: public_read
   on:
     repo: AvoJFB/d2g-webui
