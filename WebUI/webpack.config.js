@@ -6,8 +6,6 @@ var webpack = require('webpack'),
 module.exports = {
   devtool: '#eval',
   entry: [
-    'webpack-dev-server/client?http://127.0.0.0:8080',
-    'webpack/hot/only-dev-server',
     './app/index'
   ],
   output: {
