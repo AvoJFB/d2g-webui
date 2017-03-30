@@ -12,6 +12,6 @@ deploy:
   bucket: d2g-webui
   region: us-west-2
   skip_cleanup: true
-  upload-dir: public
+  local-dir: public
   on:
     repo: AvoJFB/d2g-webui
