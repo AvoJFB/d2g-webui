@@ -1,0 +1,56 @@
+{
+  "owner": {
+    "id": "f314e17b-9e28-43ae-9780-54cba623b03e",
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "email": "example@gmail.com",
+    "avatarUrl": "https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png",
+    "status": "NEW",
+    "createdDate": "2017-04-08",
+    "updatedDate": "2017-04-08",
+    "createdBy": "f314e17b-9e28-43ae-9780-54cba623b03e",
+    "updatedBy": "f314e17b-9e28-43ae-9780-54cba623b03e"
+  },
+  "periodStart": "2017-04-06T16:04:36.869Z",
+  "periodEnd": "2017-04-06T16:04:36.869Z",
+  "totalIncome": 100,
+  "totalExpense": 50,
+  "lineItems": [
+    {
+      "id" : 1,
+      "name": "Samsung Galaxy S6",
+      "category": {
+        "name": "Smartphones",
+        "tags": "Electronics"
+      },
+      "price": {
+        "cost": 499,
+        "currency": "$"
+      }
+    },
+    {
+      "id" : 2,
+      "name": "Samsung Galaxy S7",
+      "category": {
+        "name": "Smartphones",
+        "tags": "Electronics"
+      },
+      "price": {
+        "cost": 699,
+        "currency": "$"
+      }
+    },
+    {
+      "id" : 3,
+      "name": "Samsung Galaxy S8",
+      "category": {
+        "name": "Smartphones",
+        "tags": "Electronics"
+      },
+      "price": {
+        "cost": 899,
+        "currency": "$"
+      }
+    }
+  ]
+}

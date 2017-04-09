@@ -7,6 +7,7 @@ const menuItems = (
   <div>
     <Link to="/" ><FlatButton label="Home" /></Link>
     <Link to="/Auth" ><FlatButton label="Auth" /></Link>
+    <Link to="/Expenses" ><FlatButton label="Expenses" /></Link>
     <Link to="/UserInfo" ><FlatButton label="User" /></Link>
     <Link to="/UsersList" ><FlatButton label="Users" /></Link>
   </div>
