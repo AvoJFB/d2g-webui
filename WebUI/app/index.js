@@ -8,7 +8,7 @@ import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import routes from './scripts/routes';
 import store from './scripts/store';
-import styles from './styles/index.less';
+import styles from './styles/index.scss';
 
 
 // Needed for onTouchTap

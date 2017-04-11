@@ -7,7 +7,8 @@
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 		"no-console": 0,
 		"linebreak-style": 0,
-		"indent": 2
+		"indent": 2,
+		"import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
 	},
 	"env": {
 		"browser": true,
