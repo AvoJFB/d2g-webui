@@ -7,7 +7,8 @@ script: npm run build:dev
 deploy:
   provider: s3
   access_key_id: AKIAIK5IXECGIGW67N7A
-  secret_access_key: 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
+  secret_access_key:
+    secure: "g6qeiNhYELIooCQ7d770fN1nix8eRB1BdGvlp/0wBZFb0AiZ/iy6/8zJWfWlnjRSGho9ijj97azifkaif0Sw4GGdL74SWSZVrloBIPYfhNwIu2K8Q8oImhG7lF6Xxhy2/b5WxAfH47D+nHabbStiAhY9v8s5BLxw9wUQ/si6N3ay+76d7Yr5Ar9x1otfBiLlR/XkXulPkZylpvU0K0BpgvrFSjb452jSGafZmMX78/gg3Y/EXenSDJmfHZL+Y7GGKkY6zVEHl1tZKPvZ2E0XAZvqbFslAzfprHMvX5Bt1+IeLxcT8RA66kLkgAYdVxKqQJYKtyf61qxrR6o9hBuTkDRkyT/4oAAchCmTeVQIl6aYjf8pZjnO0Y+BH404QtNtVfCm3eGdGJE5TP/Dtogls2UMaX/TTyo+ld4ZSJ/lCCSXa/C4rsiFBBfdsofGd1Frf9hGb5DgSN0WMMj2oVvFinMOMd0hlq2vKRaR7ZZzVgDH0krtBZT3ehDu4kwi8KkVDQQGO2T2QhRLHZJ8AzxXSqskSMDbAC1MYCgv4YX0M41wSD3n0Z7ky7N2QOzEBfOWWkcrEoQb0gLKZmnTmDkGMlrm38BOGAIua0mNeVLQMoU19Tx8d5SvQ4c7l+6+ngm2DzXnOLcpXvOAquRDDTUhQZ8dcWsHN1ivXXAvmQRU4RQ="
   bucket: d2gwebui
   region: eu-central-1
   local-dir: public
