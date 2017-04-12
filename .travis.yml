@@ -9,7 +9,7 @@ deploy:
   access_key_id: AKIAI57RFHCHTVZTH6XA
   secret_access_key:
     secure: 2D7X/GzIk7NmjgK3aZ7sCJ2Uq5kS5+UF5OhoYyct2OmHQJtBzfEzPGFLmGXjW7b3OOhYCRycaAkSiCQ2G0MojXyKd5a8Z9gPQ7L6l1faxzTRpk6+hda/TwuDKrI2apwdH3SXfsPYZ6MsgQgbT7bNUp25dCyrHConlr5mzH80sChTgnm/pKc5Y/xypEVy3HyL0igP3M08wbk5OrHBVXu+msIPIP86chCrVLVAGp0uWqU0ieZf4rbADUAeAmdNL5z96Ad2+0n5Z2Yw/gNTSIbhOLyFXwRXoXGiuu42DWufxVuxPI94N/20EYJe9VkU4QcM0zRmtcxyP6Ki469uPnGpr6UkMieKPca3Tdt7+vvta6Fwu+3OKZNqa1xij/1X8HLESogBYey8KXC9uFXinxML7gVlugziOF7RgYgzvMdpMp/7rSXo1AIkqXqYtCEyHnqnEomKRCk4UDgbQ/Y3bXQSPtkkQbNxAoV0wFLujlBaSuaYZx73+Lx+UF6vQUYS9S1VCyMjKQj3pPmPH0B/cVaNB7RLxKS0Qjqm/7SpWtxCMNq9IwtASQZuAtAI+maq+5uoZxweik8zQbC1V9s033wj+IjyZHKJ3pXau1MJOa7oLNvRCMhvL4FwnKiOx5s5r7OMN7QWCinh9L0Y0XkAaM0K7AfUbk2/ygy4ZGE7sgRhhXw=
-  bucket: d2g-webui
+  bucket: d2gwebui
   region: eu-central-1
   local-dir: public
   acl: public_read
