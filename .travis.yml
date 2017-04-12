@@ -12,7 +12,6 @@ deploy:
   bucket: d2gwebui
   region: eu-central-1
   local-dir: public
-  acl: public_read
   skip_cleanup: true
   on:
     repo: AvoJFB/d2g-webui
