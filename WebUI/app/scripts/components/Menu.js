@@ -1,8 +1,7 @@
 import React, { propTypes } from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
-import { browserHistory } from 'react-router';
 
 class Menu extends React.Component {
   constructor(props) {
