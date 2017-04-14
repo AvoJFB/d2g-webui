@@ -95,6 +95,7 @@ class ExpensesTable extends React.Component {
       id: newRowIndex + 1,
       name: 'Product name here',
       category: 'Product category here',
+      store: 'Product store here',
       price: 'Product price here',
     };
     console.log(newRow);

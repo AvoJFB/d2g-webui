@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './components/App';
 import MainPage from './components/MainPage';
+import NotFound from './components/NotFound';
 import AuthPageContainer from './containers/AuthPageContainer';
 import ExpensesPageContainer from './containers/ExpensesPageContainer';
 import UserInfoPageContainer from './containers/UserInfoPageContainer';
@@ -23,5 +24,6 @@ export default (
     <Route path="Expenses" component={ExpensesPageContainer} onEnter={requireAuth} />
     <Route path="UserInfo" component={UserInfoPageContainer} onEnter={requireAuth} />
     <Route path="UsersList" component={UsersListPageContainer} onEnter={requireAuth} />
+    <Route path="*" component={NotFound} />
   </Route>
 );
