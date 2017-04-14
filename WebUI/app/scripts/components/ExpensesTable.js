@@ -17,17 +17,60 @@ const categories = [
   { id: 6, title: 'Electronics' },
 ];
 
+const stores = [
+  { id: 0, title: 'ATB' },
+  { id: 1, title: 'Silpo' },
+  { id: 2, title: 'Comfy' },
+  { id: 3, title: 'Foxtrot' },
+  { id: 4, title: 'Eldorado' },
+];
+
 class ExpensesTable extends React.Component {
   constructor(props) {
     super(props);
+    this.handleRowUpdated = this.handleRowUpdated.bind(this);
     this.createRows = this.createRows.bind(this);
     this.handleAddRow = this.handleAddRow.bind(this);
-    this.handleGridRowsUpdated = this.handleGridRowsUpdated.bind(this);
     this.columns = [
-      { key: 'id', name: 'ID', width: 50 },
-      { key: 'name', name: 'Name', editable: true },
-      { key: 'category', name: 'Category', editable: true, editor: <AutoCompleteEditor options={categories} /> },
-      { key: 'price', name: 'Price', editable: true }];
+      {
+        key: 'id',
+        name: 'ID',
+        width: 50,
+      },
+      {
+        key: 'name',
+        name: 'Name',
+        editable: true,
+        events: {
+          onBlur: (e, { rowIdx }) => console.log(this.state.rows[rowIdx]),
+        },
+      },
+      {
+        key: 'category',
+        name: 'Category',
+        editable: true,
+        editor: <AutoCompleteEditor options={categories} />,
+        events: {
+          onBlur: (e, { rowIdx }) => console.log(this.state.rows[rowIdx]),
+        },
+      },
+      {
+        key: 'price',
+        name: 'Price',
+        editable: true,
+        events: {
+          onBlur: (e, { rowIdx }) => console.log(this.state.rows[rowIdx]),
+        },
+      },
+      {
+        key: 'store',
+        name: 'Store',
+        editable: true,
+        editor: <AutoCompleteEditor options={stores} />,
+        events: {
+          onBlur: (e, { rowIdx }) => console.log(this.state.rows[rowIdx]),
+        },
+      }];
     this.state = {
       rows: this.createRows(),
     };
@@ -40,19 +83,11 @@ class ExpensesTable extends React.Component {
         id: item.id,
         name: item.name,
         category: item.category.name,
+        store: item.store.name,
         price: `${item.price.cost} ${item.price.currency}`,
       })
     ));
     return rows;
-  }
-
-  handleGridRowsUpdated({ fromRow, toRow, updated }) {
-    const rows = this.state.rows;
-    for (let i = fromRow; i <= toRow; i += 1) {
-      rows[i] = update(rows[i], { $merge: updated });
-      console.log(rows[i]);
-    }
-    this.setState({ rows });
   }
 
   handleAddRow({ newRowIndex }) {
@@ -68,6 +103,12 @@ class ExpensesTable extends React.Component {
     this.setState({ rows });
   }
 
+  handleRowUpdated({ rowIdx, updated }) {
+    const rows = this.state.rows;
+    Object.assign(rows[rowIdx], updated);
+    this.setState({ rows });
+  }
+
   rowGetter = i => this.state.rows[i];
 
   render() {
@@ -78,8 +119,7 @@ class ExpensesTable extends React.Component {
           columns={this.columns}
           rowGetter={this.rowGetter}
           rowsCount={this.state.rows.length}
-          onGridRowsUpdated={this.handleGridRowsUpdated}
-          onBlur={row => console.log(row)}
+          onRowUpdated={this.handleRowUpdated}
           minHeight={600}
           toolbar={<Toolbar onAddRow={this.handleAddRow} />}
         />

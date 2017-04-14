@@ -7,6 +7,9 @@ export default {
     name: PropTypes.string,
     tags: PropTypes.string,
   }),
+  store: PropTypes.shape({
+    name: PropTypes.string,
+  }),
   price: PropTypes.shape({
     cost: PropTypes.number,
     currency: PropTypes.string,

@@ -1,10 +1,10 @@
 import React, { propTypes } from 'react';
-import Menu from './Menu';
+import MenuContainer from '../containers/MenuContainer';
 
 
 const App = props => (
   <div>
-    <Menu />
+    <MenuContainer />
     <div className="container">
       {props.children}
     </div>

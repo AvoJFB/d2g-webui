@@ -29,7 +29,10 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"development"',
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+        API_URL: JSON.stringify('http://ec2-54-245-23-39.us-west-2.compute.amazonaws.com:8080'),
+      },
     }),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     new StyleLintPlugin({

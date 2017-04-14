@@ -23,6 +23,9 @@
         "name": "Smartphones",
         "tags": "Electronics"
       },
+      "store": {
+        "name": "ATB"
+      },
       "price": {
         "cost": 499,
         "currency": "$"
@@ -35,6 +38,9 @@
         "name": "Smartphones",
         "tags": "Electronics"
       },
+      "store": {
+        "name": "Comfy"
+      },
       "price": {
         "cost": 699,
         "currency": "$"
@@ -46,6 +52,9 @@
       "category": {
         "name": "Smartphones",
         "tags": "Electronics"
+      },
+      "store": {
+        "name": "Eldorado"
       },
       "price": {
         "cost": 899,
