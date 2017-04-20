@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './components/App';
-import MainPage from './components/MainPage';
 import NotFound from './components/NotFound';
-import AuthPageContainer from './containers/AuthPageContainer';
+import LoginPageContainer from './containers/LoginPageContainer';
+import RegisterPageContainer from './containers/RegisterPageContainer';
 import ExpensesPageContainer from './containers/ExpensesPageContainer';
 import UserInfoPageContainer from './containers/UserInfoPageContainer';
 import UsersListPageContainer from './containers/UsersListPageContainer';
@@ -12,17 +12,25 @@ import store from './store';
 const requireAuth = (nextState, replace) => {
   if (store.getState().auth.SecurityContext.isLoggedIn === false) {
     replace({
-      pathname: '/Auth',
+      pathname: '/',
+    });
+  }
+};
+
+const redirectIfLoggedIn = (nextState, replace) => {
+  if (store.getState().auth.SecurityContext.isLoggedIn === true) {
+    replace({
+      pathname: '/Expenses',
     });
   }
 };
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={MainPage} />
-    <Route path="Auth" component={AuthPageContainer} />
+    <IndexRoute component={LoginPageContainer} onEnter={redirectIfLoggedIn} />
+    <Route path="Register" component={RegisterPageContainer} onEnter={redirectIfLoggedIn} />
     <Route path="Expenses" component={ExpensesPageContainer} onEnter={requireAuth} />
-    <Route path="UserInfo" component={UserInfoPageContainer} onEnter={requireAuth} />
+    <Route path="Profile" component={UserInfoPageContainer} onEnter={requireAuth} />
     <Route path="UsersList" component={UsersListPageContainer} onEnter={requireAuth} />
     <Route path="*" component={NotFound} />
   </Route>

@@ -6,7 +6,6 @@ import UserShape from '../shapes/userShape';
 
 const UserInfoPage = props => (
   <div>
-    <h1>This is user info page.</h1>
     <UserInfo user={props.user} />
   </div>
 );

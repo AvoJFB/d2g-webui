@@ -1,11 +1,15 @@
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILURE, SIGN_OUT } from '../constants/authConstants';
+import {
+  SIGN_IN_SUCCESS,
+  SIGN_IN_FAILURE,
+  SIGN_OUT,
+} from '../constants/authConstants';
 
 const initialState = {
   SecurityContext: { isLoggedIn: false },
   SecurityPrincipal: null,
 };
 
-export default function authReducer(state = initialState, action) {
+export default function auth(state = initialState, action) {
   switch (action.type) {
     case SIGN_IN_SUCCESS:
       return {

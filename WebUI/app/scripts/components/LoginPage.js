@@ -14,7 +14,7 @@ class AuthPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is sign in page.</h1>
+        <p className="sign_in">Please sign in to continue.</p>
         <LoginForm onSubmit={this.handleSubmit} />
       </div>
     );

@@ -2,11 +2,16 @@ import React from 'react';
 import UserShape from '../shapes/userShape';
 
 const UserInfo = props => (
-  <div>
-    <img width="200" src={props.user.avatarUrl} alt="avatar" />
-    <p>{`First name: ${props.user.firstName}`}</p>
-    <p>{`Last name: ${props.user.lastName}`}</p>
-    <p>{`Email: ${props.user.email}`}</p>
+  <div className="user_profile">
+    <div className="user_avatar_block">
+      <img className="user_avatar" src={props.user.avatarUrl} alt="avatar" />
+      <div className="upload_button">
+        <img className="upload_icon" src="./img/upload.png" alt="upload" />
+      </div>
+    </div>
+    <div className="user_name user_text">{`${props.user.firstName} ${props.user.lastName}`}</div>
+    <div className="user_email user_text">{props.user.email}</div>
+    <div className="user_withus user_text">5 days with us.</div>
   </div>
 );
 

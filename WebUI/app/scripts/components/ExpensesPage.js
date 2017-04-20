@@ -10,7 +10,6 @@ const ExpensesPage = (props) => {
   if (props.expensesPage.fetched) {
     content = (
       <div>
-        <h1>This is expenses page.</h1>
         <ExpensesTable expenses={props.expensesPage.expenses} />
       </div>
     );

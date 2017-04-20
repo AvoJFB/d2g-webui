@@ -20,23 +20,17 @@ class Menu extends React.Component {
     if (this.props.isLoggedIn) {
       menuItems = (
         <div>
-          <Link to="/"><FlatButton label="Home" /></Link>
           <Link to="/Expenses"><FlatButton label="Expenses" /></Link>
-          <Link to="/UserInfo"><FlatButton label="User" /></Link>
+          <Link to="/Profile"><FlatButton label="Profile" /></Link>
           <Link to="/UsersList"><FlatButton label="Users" /></Link>
           <FlatButton onClick={this.handleSignOutClick} label="Sign Out" />
         </div>
       );
     } else {
-      menuItems = (
-        <div>
-          <Link to="/"><FlatButton label="Home" /></Link>
-          <Link to="/Auth"><FlatButton label="Sign In" /></Link>
-        </div>
-      );
+      menuItems = null;
     }
     return (
-      <AppBar title="D2G" iconElementRight={menuItems} />
+      <AppBar title="D2G" showMenuIconButton={false} iconElementRight={menuItems} />
     );
   }
 }
