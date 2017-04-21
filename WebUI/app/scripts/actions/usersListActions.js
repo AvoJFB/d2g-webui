@@ -18,7 +18,7 @@ export const getUsersListFailure = error => ({
 export const getUsersList = () => (
   (dispatch) => {
     dispatch(getUsersListRequest());
-    return axios.get(`${process.env.API_URL}/user`)
+    return axios.get(`${process.env.API_URL}/user`, { withCredentials: true })
       .then(response => dispatch(getUsersListSuccess(response.data.payload.usersList)))
       .catch(error => dispatch(getUsersListFailure(error)));
   }

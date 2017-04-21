@@ -7,9 +7,9 @@ const UserInfo = (props) => {
     avatar = (
       <div>
         <div className="user_avatar_block">
-          <img className="user_avatar" src={props.user.avatarUrl} alt="avatar"/>
+          <img className="user_avatar" src={props.user.avatarUrl} alt="avatar" />
           <div className="upload_button">
-            <img className="upload_icon" src="./img/upload.png" alt="upload"/>
+            <img className="upload_icon" src="./img/upload.png" alt="upload" />
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@ const UserInfo = (props) => {
       <div className="user_withus user_text">5 days with us.</div>
     </div>
   );
-}
+};
 
 UserInfo.propTypes = {
   user: React.PropTypes.shape(UserShape),
