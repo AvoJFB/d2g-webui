@@ -8,7 +8,7 @@ class AuthPage extends React.Component {
   }
 
   handleSubmit(values) {
-    this.props.onSignIn();
+    this.props.onSignIn(values);
   }
 
   render() {

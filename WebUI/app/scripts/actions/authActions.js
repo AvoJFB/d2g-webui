@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { SIGN_IN_REQUEST,
@@ -6,7 +7,9 @@ import { SIGN_IN_REQUEST,
   SIGN_UP_REQUEST,
   SIGN_UP_SUCCESS,
   SIGN_UP_FAILURE,
-  SIGN_OUT,
+  SIGN_OUT_REQUEST,
+  SIGN_OUT_SUCCESS,
+  SIGN_OUT_FAILURE,
 } from '../constants/authConstants';
 
 export const signInRequest = () => ({
@@ -23,17 +26,36 @@ export const signInFailure = error => ({
   error,
 });
 
-export const signOut = () => ({
-  type: SIGN_OUT,
+export const signOutRequest = () => ({
+  type: SIGN_OUT_REQUEST,
 });
 
-export const signIn = () => (
+export const signOutSuccess = () => ({
+  type: SIGN_OUT_SUCCESS,
+});
+
+export const signOutFailure = () => ({
+  type: SIGN_OUT_FAILURE,
+});
+
+export const signOut = () => (
+  (dispatch) => {
+    dispatch(signOutRequest());
+    return axios.get(`${process.env.API_URL}/user/logout`)
+      .then(() => {
+        dispatch(signOutSuccess());
+      })
+      .catch(error => dispatch(signOutFailure(error)));
+  }
+);
+
+export const signIn = credentials => (
   (dispatch) => {
     dispatch(signInRequest());
-    return axios.get('./user.json')
+    return axios.post(`${process.env.API_URL}/user/login`, credentials)
       .then((response) => {
         dispatch(signInSuccess(response.data));
-        browserHistory.push('/Expenses');
+        browserHistory.push('/Profile');
       })
       .catch(error => dispatch(signInFailure(error)));
   }

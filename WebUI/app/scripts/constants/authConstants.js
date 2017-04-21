@@ -4,7 +4,8 @@ export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE';
 export const SIGN_UP_REQUEST = 'SIGN_UP_REQUEST';
 export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
 export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE';
-export const SIGN_OUT = 'SING_OUT';
-
+export const SIGN_OUT_REQUEST = 'SING_OUT_REQUEST';
+export const SIGN_OUT_SUCCESS = 'SING_OUT_SUCCESS';
+export const SIGN_OUT_FAILURE = 'SING_OUT_FAILURE';
 
 export default '';

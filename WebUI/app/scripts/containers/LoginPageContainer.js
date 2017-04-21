@@ -4,8 +4,8 @@ import { signIn } from '../actions/authActions';
 
 const mapDispatchToProps = dispatch => (
   {
-    onSignIn() {
-      dispatch(signIn());
+    onSignIn(credentials) {
+      dispatch(signIn(credentials));
     },
   }
 );
