@@ -11,7 +11,6 @@ class Menu extends React.Component {
 
   handleSignOutClick() {
     this.props.onSignOut();
-    browserHistory.push('/');
   }
 
   render() {

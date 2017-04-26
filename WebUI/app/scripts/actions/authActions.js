@@ -9,6 +9,9 @@ import { SIGN_IN_REQUEST,
   SIGN_OUT_REQUEST,
   SIGN_OUT_SUCCESS,
   SIGN_OUT_FAILURE,
+  GET_SESSION_REQUEST,
+  GET_SESSION_SUCCESS,
+  GET_SESSION_FAILURE,
 } from '../constants/authConstants';
 
 export const signInRequest = () => ({
@@ -37,29 +40,6 @@ export const signOutFailure = () => ({
   type: SIGN_OUT_FAILURE,
 });
 
-export const signOut = () => (
-  (dispatch) => {
-    dispatch(signOutRequest());
-    return axiosClient.get('user/logout')
-      .then(() => {
-        dispatch(signOutSuccess());
-        browserHistory.push('/');
-      })
-      .catch(error => dispatch(signOutFailure(error)));
-  }
-);
-
-export const signIn = credentials => (
-  (dispatch) => {
-    dispatch(signInRequest());
-    return axiosClient.post('user/login', credentials)
-      .then((response) => {
-        dispatch(signInSuccess(response.data));
-        browserHistory.push('/Profile');
-      })
-      .catch(error => dispatch(signInFailure(error)));
-  }
-);
 
 export const signUpRequest = () => ({
   type: SIGN_UP_REQUEST,
@@ -73,6 +53,44 @@ export const signUpFailure = () => ({
   type: SIGN_UP_FAILURE,
 });
 
+export const getSessionRequest = () => ({
+  type: GET_SESSION_REQUEST,
+});
+
+export const getSessionSuccess = user => ({
+  type: GET_SESSION_SUCCESS,
+  user,
+});
+
+export const getSessionFailure = error => ({
+  type: GET_SESSION_FAILURE,
+  error,
+});
+
+export const signIn = credentials => (
+  (dispatch) => {
+    dispatch(signInRequest());
+    return axiosClient.post('user/login', credentials)
+      .then((response) => {
+        dispatch(signInSuccess(response.data));
+        browserHistory.push('/Profile');
+      })
+      .catch(error => dispatch(signInFailure(error)));
+  }
+);
+
+export const signOut = () => (
+  (dispatch) => {
+    dispatch(signOutRequest());
+    return axiosClient.get('user/logout')
+      .then(() => {
+        dispatch(signOutSuccess());
+        browserHistory.push('/');
+      })
+      .catch(error => dispatch(signOutFailure(error)));
+  }
+);
+
 export const signUp = user => (
   (dispatch) => {
     dispatch(signUpRequest());
@@ -81,5 +99,16 @@ export const signUp = user => (
         dispatch(signUpSuccess());
       })
       .catch(() => dispatch(signUpFailure()));
+  }
+);
+
+export const getSession = () => (
+  (dispatch) => {
+    dispatch(getSessionRequest());
+    return axiosClient.get('user/session')
+      .then((response) => {
+        dispatch(getSessionSuccess(response.data.payload));
+      })
+      .catch(error => dispatch(getSessionFailure(error)));
   }
 );

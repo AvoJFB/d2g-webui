@@ -3,6 +3,8 @@ import {
   SIGN_IN_FAILURE,
   SIGN_OUT_SUCCESS,
   SIGN_OUT_FAILURE,
+  GET_SESSION_SUCCESS,
+  GET_SESSION_FAILURE,
 } from '../constants/authConstants';
 
 const initialState = {
@@ -30,6 +32,17 @@ export default function auth(state = initialState, action) {
         SecurityPrincipal: null,
       };
     case SIGN_OUT_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+      };
+    case GET_SESSION_SUCCESS:
+      return {
+        ...state,
+        SecurityContext: { isLoggedIn: true },
+        SecurityPrincipal: { user: action.user },
+      };
+    case GET_SESSION_FAILURE:
       return {
         ...state,
         error: action.error,

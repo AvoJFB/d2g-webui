@@ -2,16 +2,25 @@ import React, { propTypes } from 'react';
 import MenuContainer from '../containers/MenuContainer';
 
 
-const App = props => (
-  <div>
-    <MenuContainer />
-    <div className="container">
-      {props.children}
-    </div>
-  </div>
-);
+class App extends React.Component {
+  componentWillMount() {
+    this.props.onGetSession();
+  }
+
+  render() {
+    return (
+      <div>
+        <MenuContainer />
+        <div className="container">
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
+}
 
 App.propTypes = {
+  onGetSession: React.PropTypes.func,
   children: React.PropTypes.oneOfType([
     React.PropTypes.arrayOf(React.PropTypes.node),
     React.PropTypes.node,

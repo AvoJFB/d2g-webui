@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axiosClient from '../axiosClient';
 import { GET_USER_LIST_REQUEST, GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } from '../constants/userConstants';
 
 export const getUsersListRequest = () => ({
@@ -18,7 +18,7 @@ export const getUsersListFailure = error => ({
 export const getUsersList = () => (
   (dispatch) => {
     dispatch(getUsersListRequest());
-    return axios.get(`${process.env.API_URL}/user`, { withCredentials: true })
+    return axiosClient.get(`${process.env.API_URL}/user`)
       .then(response => dispatch(getUsersListSuccess(response.data.payload.usersList)))
       .catch(error => dispatch(getUsersListFailure(error)));
   }
