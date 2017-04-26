@@ -9,6 +9,7 @@ class RegisterPage extends React.Component {
 
   handleSubmit(values) {
     this.props.onSignUp(values);
+    this.props.handleReset('register');
   }
 
   render() {
@@ -20,6 +21,7 @@ class RegisterPage extends React.Component {
 
 RegisterPage.propTypes = {
   onSignUp: React.PropTypes.func,
+  handleReset: React.PropTypes.func,
 };
 
 export default RegisterPage;

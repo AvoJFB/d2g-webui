@@ -18,7 +18,12 @@ const RegisterForm = (props) => {
       <br />
       <Field name="password" component={TextField} floatingLabelText="Password" label="Password" type="password" />
       <br />
-      <Field name="passwordConfirm" component={TextField} floatingLabelText="Confirm Password" label="Confirm Password" type="password" />
+      <Field
+        name="passwordConfirm"
+        component={TextField}
+        floatingLabelText="Confirm Password"
+        label="Confirm Password" type="password"
+      />
       <br />
       <Link to="/"><FlatButton label="Cancel" /></Link>
       <FlatButton type="submit" label="Submit" />

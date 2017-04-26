@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
@@ -9,7 +10,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import routes from './scripts/routes';
 import store from './scripts/store';
 import styles from './styles/index.scss';
-
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941

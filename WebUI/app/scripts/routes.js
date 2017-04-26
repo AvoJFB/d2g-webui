@@ -27,7 +27,7 @@ const redirectIfLoggedIn = (nextState, replace) => {
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={LoginPageContainer} onEnter={redirectIfLoggedIn} />
+    <IndexRoute component={LoginPageContainer} />
     <Route path="Register" component={RegisterPageContainer} onEnter={redirectIfLoggedIn} />
     <Route path="Expenses" component={ExpensesPageContainer} onEnter={requireAuth} />
     <Route path="Profile" component={UserInfoPageContainer} onEnter={requireAuth} />
