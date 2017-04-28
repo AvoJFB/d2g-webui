@@ -11,7 +11,7 @@ class Menu extends React.Component {
 
   handleSignOutClick() {
     this.props.onSignOut();
-    browserHistory.push('/');
+    this.context.router.push('/');
   }
 
   render() {
@@ -33,6 +33,10 @@ class Menu extends React.Component {
     );
   }
 }
+
+Menu.contextTypes = {
+  router: React.PropTypes.object,
+};
 
 Menu.propTypes = {
   isLoggedIn: React.PropTypes.bool,
