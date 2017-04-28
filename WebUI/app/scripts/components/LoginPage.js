@@ -23,7 +23,6 @@ class LoginPage extends React.Component {
 }
 
 LoginPage.propTypes = {
-  isLoggedIn: React.PropTypes.bool,
   onSignIn: React.PropTypes.func,
 };
 
