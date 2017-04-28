@@ -3,7 +3,7 @@ import App from '../components/App';
 import { getSession } from '../actions/authActions';
 
 const mapStateToProps = state => ({
-  expensesPage: state.expensesPage,
+  isLoggedIn: state.auth.SecurityContext.isLoggedIn,
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -9,17 +9,9 @@ import UserInfoPageContainer from './containers/UserInfoPageContainer';
 import UsersListPageContainer from './containers/UsersListPageContainer';
 import store from './store';
 
-const redirectIfLoggedIn = (nextState, replace) => {
-  if (store.getState().auth.SecurityContext.isLoggedIn === true) {
-    replace({
-      pathname: 'Profile',
-    });
-  }
-};
-
 export default (
   <Route component={AppContainer} >
-    <Route path="/" component={LoginPageContainer} onEnter={redirectIfLoggedIn} />
+    <Route path="/" component={LoginPageContainer} />
     <Route path="Register" component={RegisterPageContainer} />
     <Route path="Expenses" component={ExpensesPageContainer} />
     <Route path="Profile" component={UserInfoPageContainer} />

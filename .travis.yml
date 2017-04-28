@@ -9,8 +9,8 @@ deploy:
   access_key_id: AKIAIOMDQIHOPAN6HBAQ
   secret_access_key:
     secure: c0YkoAYhbOBPV1Ub195U34bEq6gZu72/KFgb58BjsTnGf1/fOVnqI/skxBppBeUaki2M6dAFGBvvEsCpYhMi+dV6WgdZzvYZI4iXmoCB9C+wf3Jq1/cUBS13SGbZAI9YtE4CjLv8RtlpRVuo8y2t7CxSaetdG3ubGRoXHBFfwB4TFACb8iHDMtGJw0PxZUS/QPi+bCK8iax96gu7GQXw2SoEzgO+PxmOFrAJdCtheHWzfEdEMYsq+PC4E+2T6xzqVUfvLyN4ZwPQ42e3qv7pY+rbnooq3WYnFC3QyrDfKE+hQBQTSx0mfZdTTtPDlky4h5FrPpGat5zi7IcG+uux9DIqb/2L5m7Qh8FA00BxdWbAqg8dR6araV6K+Eq27Eg5wvLXGGyoTltlApGVbwW4oues1C1iI68tRv2vPyJKPt3a+5egBp6v1q10sFNzguW6FjMzeiC4Kq2tl/nMYK1QXxgre2Gm8/ujozADZuhrViZlquQOv+4kSuOEYK73LL6l5ipGNpFm4uFmSsRfQs9W7DjOG6/3EsEH8+fd5YsfcK1NNp2/EjW89nVinWLvr6cnZm+3TLXbenpKA6olRWwQpAW5R9f18EzPZQQy1mCIvaJB0QZrx76qN4OU7LOfbC3se8fZkFR8v+pwJ/cPgqUjF9RRvoU0GhmIsuKUPMR8eqY=
-  bucket: d2gwebui
-  region: eu-central-1
+  bucket: drivetogain.ga
+  region: us-west-2
   local-dir: public
   acl: public_read
   skip_cleanup: true

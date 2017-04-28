@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 import LoginForm from './LoginForm';
 
-class AuthPage extends React.Component {
+class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,8 +22,9 @@ class AuthPage extends React.Component {
   }
 }
 
-AuthPage.propTypes = {
+LoginPage.propTypes = {
+  isLoggedIn: React.PropTypes.bool,
   onSignIn: React.PropTypes.func,
 };
 
-export default AuthPage;
+export default LoginPage;
