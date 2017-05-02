@@ -6,13 +6,10 @@ const mapStateToProps = state => ({
   isLoggedIn: state.auth.SecurityContext.isLoggedIn,
 });
 
-const mapDispatchToProps = (dispatch) => {
-  dispatch(getSession());
-  return {
-    onGetSession() {
-      dispatch(getSession());
-    },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  onGetSession() {
+    dispatch(getSession());
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
