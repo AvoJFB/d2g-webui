@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { browserHistory } from 'react-router';
 import LoginForm from './LoginForm';
 
 class LoginPage extends React.Component {

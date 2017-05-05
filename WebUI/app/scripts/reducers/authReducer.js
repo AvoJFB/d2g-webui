@@ -7,10 +7,22 @@ import {
   GET_SESSION_FAILURE,
 } from '../constants/authConstants';
 
-const initialState = {
-  SecurityContext: { isLoggedIn: false },
-  SecurityPrincipal: null,
+export const loadState = () => {
+  try {
+    const serializedState = sessionStorage.getItem('auth');
+    if (serializedState === null) {
+      return {
+        SecurityContext: { isLoggedIn: false },
+        SecurityPrincipal: null,
+      };
+    }
+    return JSON.parse(serializedState);
+  } catch (err) {
+    return undefined;
+  }
 };
+
+const initialState = loadState();
 
 export default function auth(state = initialState, action) {
   switch (action.type) {

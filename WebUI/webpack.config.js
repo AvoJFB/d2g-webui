@@ -31,7 +31,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-        API_URL: JSON.stringify('http://ec2-54-244-215-103.us-west-2.compute.amazonaws.com'),
+        API_URL: JSON.stringify('http://api.drivetogain.ga'),
       },
     }),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),

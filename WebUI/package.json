@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "node_modules/.bin/webpack --config webpack.config.js",
     "start": "node_modules/.bin/webpack-dev-server --inline --content-base --history-api-fallback",
-    "eslint": "node_modules/.bin/eslint app/**/*.js"
+    "eslint": "node_modules/.bin/eslint app/**/*.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
