@@ -1,5 +1,5 @@
 import { browserHistory } from 'react-router';
-import { push } from 'react-router-redux';
+import { push, replace } from 'react-router-redux';
 import axiosClient from '../axiosClient';
 import { SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
@@ -95,7 +95,6 @@ export const signOut = () => (
       .then(() => {
         dispatch(signOutSuccess());
         sessionStorage.removeItem('auth');
-        dispatch(push('/'));
       })
       .catch(error => dispatch(signOutFailure(error)));
   }

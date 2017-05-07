@@ -8,32 +8,15 @@ import RegisterPageContainer from './containers/RegisterPageContainer';
 import ExpensesPageContainer from './containers/ExpensesPageContainer';
 import UserInfoPageContainer from './containers/UserInfoPageContainer';
 import UsersListPageContainer from './containers/UsersListPageContainer';
-import store from './store';
-
-const requireGuest = (nextState, replace) => {
-  if (store.getState().auth.SecurityContext.isLoggedIn) {
-    replace({
-      pathname: '/Profile',
-    });
-  }
-};
-
-const requireAuth = (nextState, replace) => {
-  if (!store.getState().auth.SecurityContext.isLoggedIn) {
-    replace({
-      pathname: '/',
-    });
-  }
-};
-
+import requireAuth from './HOC/requireAuth';
 
 export default (
   <Route component={App} >
-    <Route component={Wrapper} onEnter={requireGuest}>
+    <Route component={Wrapper} >
       <Route path="/" component={LoginPageContainer} />
       <Route path="/Register" component={RegisterPageContainer} />
     </Route>
-    <Route component={Wrapper} onEnter={requireAuth} >
+    <Route component={requireAuth(Wrapper)} >
       <Route path="/Expenses" component={ExpensesPageContainer} />
       <Route path="/Profile" component={UserInfoPageContainer} />
       <Route path="/UsersList" component={UsersListPageContainer} />
