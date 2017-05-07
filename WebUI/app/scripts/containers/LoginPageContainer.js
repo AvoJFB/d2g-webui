@@ -2,10 +2,6 @@ import { connect } from 'react-redux';
 import LoginPage from '../components/LoginPage';
 import { signIn } from '../actions/authActions';
 
-const mapStateToProps = state => ({
-  isLoggedIn: state.auth.SecurityContext.isLoggedIn,
-});
-
 const mapDispatchToProps = dispatch => (
   {
     onSignIn(credentials) {
@@ -14,4 +10,4 @@ const mapDispatchToProps = dispatch => (
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default connect(null, mapDispatchToProps)(LoginPage);

@@ -1,4 +1,5 @@
 import { browserHistory } from 'react-router';
+import { push } from 'react-router-redux';
 import axiosClient from '../axiosClient';
 import { SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
@@ -36,8 +37,9 @@ export const signOutSuccess = () => ({
   type: SIGN_OUT_SUCCESS,
 });
 
-export const signOutFailure = () => ({
+export const signOutFailure = error => ({
   type: SIGN_OUT_FAILURE,
+  error,
 });
 
 
@@ -73,7 +75,14 @@ export const signIn = credentials => (
     return axiosClient.post('user/login', credentials)
       .then((response) => {
         dispatch(signInSuccess(response.data));
-        browserHistory.push('/Profile');
+        const auth = {
+          SecurityPrincipal: {
+            user: response.data,
+          },
+          SecurityContext: { isLoggedIn: true },
+        };
+        sessionStorage.setItem('auth', JSON.stringify(auth));
+        dispatch(push('/Profile'));
       })
       .catch(error => dispatch(signInFailure(error)));
   }
@@ -85,7 +94,8 @@ export const signOut = () => (
     return axiosClient.get('user/logout')
       .then(() => {
         dispatch(signOutSuccess());
-        browserHistory.push('/');
+        sessionStorage.removeItem('auth');
+        dispatch(push('/'));
       })
       .catch(error => dispatch(signOutFailure(error)));
   }

@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -15,10 +15,12 @@ import styles from './styles/index.scss';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
+const history = syncHistoryWithStore(browserHistory, store);
+
 ReactDom.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-      <Router history={browserHistory} routes={routes} />
+      <Router history={history} routes={routes} />
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('root'),

@@ -1,5 +1,6 @@
 import React, { propTypes } from 'react';
 import { Link, browserHistory } from 'react-router';
+import { routeActions } from 'react-router-redux';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -11,7 +12,6 @@ class Menu extends React.Component {
 
   handleSignOutClick() {
     this.props.onSignOut();
-    this.context.router.push('/');
   }
 
   render() {
@@ -33,10 +33,6 @@ class Menu extends React.Component {
     );
   }
 }
-
-Menu.contextTypes = {
-  router: React.PropTypes.object,
-};
 
 Menu.propTypes = {
   isLoggedIn: React.PropTypes.bool,
