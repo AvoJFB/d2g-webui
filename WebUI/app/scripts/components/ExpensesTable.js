@@ -6,10 +6,14 @@ import ItemShape from '../shapes/itemShape';
 const products = [{
   id: 1,
   name: 'Product1',
+  store: 'ATB',
+  category: 'Electronics',
   price: 120,
 }, {
   id: 2,
   name: 'Product2',
+  store: 'Silpo',
+  category: 'Food',
   price: 80,
 }];
 
@@ -32,11 +36,12 @@ const jobTypes = ['ATB', 'Silpo'];
 
 
 const selectRow = {
-  mode: 'checkbox', // radio or checkbox
+  mode: 'checkbox',
 };
 const options = {
   onAddRow: row => console.log(`Added row: ${JSON.stringify(row)}`),
   onDeleteRow: row => console.log(`Deleted row: ${JSON.stringify(row)}`),
+  clearSearch: true,
 };
 
 const ExpensesTable = () => (
@@ -48,14 +53,19 @@ const ExpensesTable = () => (
     deleteRow
     selectRow={selectRow}
     options={options}
+    search
   >
-    <TableHeaderColumn isKey dataField="id">Product ID</TableHeaderColumn>
-    <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
-    <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
+    <TableHeaderColumn isKey dataField="id">ID</TableHeaderColumn>
+    <TableHeaderColumn dataField="name">Name</TableHeaderColumn>
+    <TableHeaderColumn dataField="category">Category</TableHeaderColumn>
     <TableHeaderColumn
       dataField="store"
       editable={{ type: 'select', options: { values: jobTypes } }}
-    >Store Name</TableHeaderColumn>
+    >
+      Store Name
+    </TableHeaderColumn>
+    <TableHeaderColumn dataField="price">Price</TableHeaderColumn>
+    <TableHeaderColumn dataField="datetime" editable={{ type: 'datetime' }}>Date Time</TableHeaderColumn>
   </BootstrapTable>
 );
 
