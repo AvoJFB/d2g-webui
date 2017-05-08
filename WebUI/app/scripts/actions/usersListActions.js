@@ -1,4 +1,4 @@
-import axiosClient from '../axiosClient';
+import axiosClient from '../utils/axiosClient';
 import { GET_USER_LIST_REQUEST, GET_USER_LIST_SUCCESS, GET_USER_LIST_FAILURE } from '../constants/userConstants';
 
 export const getUsersListRequest = () => ({

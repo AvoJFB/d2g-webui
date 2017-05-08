@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router';
 import { TextField } from 'redux-form-material-ui';
 import FlatButton from 'material-ui/FlatButton';
-import validate from '../validate';
+import validate from '../utils/validate';
 
 
 const RegisterForm = (props) => {

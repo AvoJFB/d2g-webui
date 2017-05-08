@@ -1,6 +1,6 @@
 import { browserHistory } from 'react-router';
 import { push, replace } from 'react-router-redux';
-import axiosClient from '../axiosClient';
+import axiosClient from '../utils/axiosClient';
 import { SIGN_IN_REQUEST,
   SIGN_IN_SUCCESS,
   SIGN_IN_FAILURE,

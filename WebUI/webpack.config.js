@@ -50,7 +50,7 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         include: path.resolve(__dirname, 'app'),
